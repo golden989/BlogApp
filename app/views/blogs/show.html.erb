@@ -1,0 +1,54 @@
+<style>
+  /* Heading */
+  h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  /* Blog details container */
+  .blog-details {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Blog title */
+  .blog-title {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /* Blog content */
+  .blog-content {
+    color: #666;
+    margin-bottom: 10px;
+    text-align: justify;
+  }
+
+  /* Blog author */
+  .blog-author {
+    font-weight: bold;
+    text-align: right;
+  }
+</style>
+
+<h1>Blog details</h1>
+
+<div class="blog-details">
+  <h2 class="blog-title"><%=@blog.title%></h2>
+  <h2 class="blog-content"><%=@blog.content%></h2>
+  <h2 class="blog-author"><%=@blog.author%></h2>
+</div>
+

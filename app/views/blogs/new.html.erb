@@ -1,0 +1,61 @@
+<style>
+  /* Form container */
+  .blog-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Form labels */
+  .blog-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  /* Form inputs */
+  .blog-form input[type="text"],
+  .blog-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+
+  /* Submit button */
+  .blog-form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .blog-form input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+</style>
+
+<h3>Create a Blog</h3>
+<div class="blog-form">
+  <%= form_with model: @blog do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title, placeholder: "Enter title of Blog" %> <br>
+    <%= f.label :content %>
+    <%= f.text_area :content, placeholder: "Write content of Blog" %> <br>
+    <%= f.label :author %>
+    <%= f.text_field :author, placeholder: "Enter Author of Blog" %> <br>
+
+    <%= f.submit %>
+  <% end %>
+</div>
